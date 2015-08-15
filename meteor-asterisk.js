@@ -1,61 +1,30 @@
+Resolution = new Mongo.Collection('a');
+
+
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+
+Template.body.helpers({
+
+    tableData: function(){
+      return Resolution.find();
+    }
+       
+});
+
+
+
+Session.setDefault('sumEvents', 0);
+
+
+  Template.totalEvents.helpers({
+    sumEvents: function () {
+     return Resolution.find().count();
     }
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
+       
 
-
-
-
-
-
-  $(function() {
-
-    $('#side-menu').metisMenu();
-
-});
-
-//Loads the correct sidebar on window load,
-//collapses the sidebar on window resize.
-// Sets the min-height of #page-wrapper to window size
-$(function() {
-    $(window).bind("load resize", function() {
-        topOffset = 50;
-        width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
-        if (width < 768) {
-            $('div.navbar-collapse').addClass('collapse');
-            topOffset = 100; // 2-row-menu
-        } else {
-            $('div.navbar-collapse').removeClass('collapse');
-        }
-
-        height = ((this.window.innerHeight > 0) ? this.window.innerHeight : this.screen.height) - 1;
-        height = height - topOffset;
-        if (height < 1) height = 1;
-        if (height > topOffset) {
-            $("#page-wrapper").css("min-height", (height) + "px");
-        }
-    });
-
-    var url = window.location;
-    var element = $('ul.nav a').filter(function() {
-        return this.href == url || url.href.indexOf(this.href) == 0;
-    }).addClass('active').parent().parent().addClass('in').parent();
-    if (element.is('li')) {
-        element.addClass('active');
-    }
-});
 
 }
 
@@ -64,3 +33,14 @@ if (Meteor.isServer) {
     // code to run on server at startup
   });
 }
+
+
+
+/*
+    [
+    {cod:"1", date:"10-21-2013",time:"3:29", price:"1,00"},
+    {cod:"2", date:"10-21-2013",time:"3:40", price:"2,30"},
+    {cod:"3", date:"10-21-2013",time:"4:29", price:"2,11"},
+    {cod:"4", date:"10-21-2013",time:"5:59", price:"1,50"} 
+    ]
+*/
