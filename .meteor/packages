@@ -8,3 +8,6 @@ meteor-platform
 autopublish
 insecure
 iron:router
+matb33:bootstrap-glyphicons
+accounts-password
+accounts-ui
