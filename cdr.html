@@ -1,3 +1,4 @@
+
 <template name="cdr">
                 <div class="col-lg-8">
                     
@@ -15,17 +16,17 @@
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
-                                                    <th>Date</th>
-                                                    <th>Time</th>
-                                                    <th>Amount</th>
+                                                    <th>Data</th>
+                                                    <th>Origem</th>
+                                                    <th>Destino</th>
+                                                    <th>Tempo</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
 
-                                            {{#each tableData}}
+                                            {{#each tableDataCdr}}
                                             
-                                            {{> tbdata}}
+                                            {{> tbdataCdr}}
                                             
                                             
                                             {{/each}}
@@ -52,3 +53,37 @@
                     <!-- /.panel -->
                 </div>
 </template>
+
+
+
+
+<template name="totalCdr">
+<div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    
+                                </div>
+                                <div class="col-xs-5 text-right">
+                                    <div class="huge">{{sumCdr}}</div>
+                                    <div>Event CDR</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+</div>
+</template>
+
+
+<template name="tbdataCdr">
+                    <tr>
+                        <td>{{calldate}}</td>
+                        <td>{{src}}</td>
+                        <td>{{dst}}</td>
+                        <td>{{billsec}}</td>
+                    </tr>
+
+</template>
+
