@@ -1,6 +1,5 @@
 <template name="dashboard">
 
-
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header"></h1>
@@ -11,29 +10,23 @@
             <div class="row">
                 
                     {{> totalCdr}}
-
                 
                     {{> totalEventos}}
 
+                    {{> eventsIpWall}}
+                
+                    {{> eventWorn}}
+               
+            </div>
+
+</template>
 
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    
-                                </div>
-                                <div class="col-xs-5 text-right">
-                                    <div class="huge">124</div>
-                                    <div>Ocupado</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
+
+
+
+<template name="eventWorn">
+ <div class="col-lg-3 col-md-6">
                     <div class="panel panel-red">
                         <div class="panel-heading">
                             <div class="row">
@@ -41,13 +34,11 @@
                                     
                                 </div>
                                 <div class="col-xs-5 text-right">
-                                    <div class="huge">13</div>
-                                    <div>Off Line</div>
+                                    <div class="huge">{{sumEventsWorn}}</div>
+                                    <div>Worning</div>
                                 </div>
                             </div>
                         </div>
-                                            </div>
-                </div>
-            </div>
-
+                     </div>
+</div>
 </template>

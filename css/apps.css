@@ -1,0 +1,72 @@
+/*	
+*	#######################################################################
+*	
+*	Portal JBTEC
+*	---------------------------------------------------------------------
+*
+*	Version		2.0
+*	Author		Eduardo Cervan
+*	Copyright	Copyright 2015 JBtec
+*	
+*	#######################################################################
+*/
+
+.apps_content {
+  width: 100%; 
+  min-height: 340px; 
+  display: table; 
+  text-align: center;
+}
+.apps_itens{
+    width: 250px; 
+    height: 300px; 
+    border: 1px solid #AFAFAF; 
+    color: #FFF; 
+    margin: 10px 10px;  
+    display: inline-block;
+    float: left;
+    overflow:hidden;
+}
+ 
+.apps_itens img {
+    width: auto;
+}
+.apps_icon{
+    width: 240px;
+    height: 180px;
+    background-color: #FF7F00;
+    background-color: #000;
+    border-radius: 5px;
+    margin:4px 0 0 4px;
+}
+.apps_describe{
+    width: 240px;
+    height: 90px;
+    margin:4px 0 0 4px;    
+    clear: both;
+    color: #000;
+    text-align: left;
+}
+
+.apps_titles{
+    font-size: 11px;
+    color: #464637;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.apps_text{
+    font-size: 12px;
+    color: #888;
+    
+}
+
+.apps_icon_type{
+    width: 90px;
+    height: 20px;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0 0 0 158px;
+}
+.apps_icon_type_text{
+    width: 100%; height: 100%; text-align: center !important;
+}
